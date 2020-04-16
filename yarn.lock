@@ -34,6 +34,11 @@ bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
   resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.8.tgz#2cde09eb5ee341f484746bb0309b3253b1b1442f"
   integrity sha512-ItfYfPLkWHUjckQCk8xC+LwxgK8NYcXywGigJgSwOP8Y2iyWT4f2vsZnoOXTTbo+o5yXmIUJ4gn5538SO5S3gA==
 
+bowser@^2.5.4:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/bowser/-/bowser-2.9.0.tgz#3bed854233b419b9a7422d9ee3e85504373821c9"
+  integrity sha512-2ld76tuLBNFekRgmJfT2+3j5MIrP6bFict8WAIT3beq+srz1gcKNAdNKMqHqauQt63NmAa88HfP1/Ypa9Er3HA==
+
 brorand@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
@@ -124,6 +129,13 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   dependencies:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
+
+conflux-portal-onboarding@^0.0.1-a:
+  version "0.0.1-a"
+  resolved "https://registry.yarnpkg.com/conflux-portal-onboarding/-/conflux-portal-onboarding-0.0.1-a.tgz#3fc82c62b419c2ca0efa10b56b8b24b25d8cb5a1"
+  integrity sha512-UbZslLgybq369UquPIFmJWdJTymTrvRO+omkgtcEIDahDVZCUqFWcEr/BBULKTLhvfbD6jomZGAXxJyK2PArog==
+  dependencies:
+    bowser "^2.5.4"
 
 console-browserify@^1.1.0:
   version "1.2.0"

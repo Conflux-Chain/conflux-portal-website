@@ -1,43 +1,27 @@
 (ns conflux-portal-website.views
   (:require
-   [re-frame.core :as re-frame]
-   [breaking-point.core :as bp]
+   ["conflux-portal-onboarding/dist/conflux-portal-onboarding.cjs.js" :as Onboarding]
+   [re-frame.core :as rf]
    [conflux-portal-website.subs :as subs]
-   ))
+   [conflux-portal-website.pages.home :as home]))
 
-
-;; home
-
-(defn home-panel []
-  (let [name (re-frame/subscribe [::subs/name])]
-    [:div
-     [:h1 (str "Hello from " @name ". This is the Home Page.")]
-
-     [:div
-      [:a {:href "#/about"}
-       "go to About Page"]]
-     [:div
-      [:h3 (str "screen-width: " @(re-frame/subscribe [::bp/screen-width]))]
-      [:h3 (str "screen: " @(re-frame/subscribe [::bp/screen]))]]
-     ]))
-
+(def onboarding (Onboarding. (clj->js {:noinject false})))
+(js/console.log onboarding)
+(js/console.log (Onboarding/isConfluxPortalInstalled))
 
 ;; about
-
 (defn about-panel []
   [:div
    [:h1 "This is the About Page."]
-
    [:div
     [:a {:href "#/"}
      "go to Home Page"]]])
 
 
 ;; main
-
 (defn- panels [panel-name]
   (case panel-name
-    :home-panel [home-panel]
+    :home-panel [home/ui]
     :about-panel [about-panel]
     [:div]))
 
@@ -45,5 +29,5 @@
   [panels panel-name])
 
 (defn main-panel []
-  (let [active-panel (re-frame/subscribe [::subs/active-panel])]
+  (let [active-panel (rf/subscribe [::subs/active-panel])]
     [show-panel @active-panel]))
