@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>下载</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Portal-Landing" transform="translate(-308.000000, -621.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="BTN" transform="translate(185.000000, 608.000000)">
+                <g id="下载" transform="translate(123.000000, 13.000000)">
+                    <path d="M11.0000156,21.4568121 L11.0000152,21.4568121 C5.22488434,21.4568121 0.543218731,16.7751465 0.543218731,11.0000156 C0.543218731,5.22488479 5.22488434,0.543219188 11.0000152,0.543219188 C16.775146,0.543219188 21.4568116,5.22488479 21.4568116,11.0000156 L21.4568116,11.0000156 C21.4568116,16.7751465 16.775146,21.4568121 11.0000152,21.4568121 L11.0000156,21.4568121 Z M12.4938448,11.0000156 L12.4938448,5.02468838 L9.5061812,5.02468838 L9.5061812,11.0000156 L5.02468575,11.0000156 L11.000013,16.9753429 L16.9753403,11.0000156 L12.4938448,11.0000156 Z" id="形状"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

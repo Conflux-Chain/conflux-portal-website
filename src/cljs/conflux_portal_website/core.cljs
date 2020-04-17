@@ -1,6 +1,7 @@
 (ns conflux-portal-website.core
   (:require
    [reagent.core :as reagent]
+   [reagent.dom :as rdom]
    [re-frame.core :as re-frame]
    [breaking-point.core :as bp]
    [conflux-portal-website.events :as events]
@@ -16,8 +17,8 @@
 
 (defn ^:dev/after-load mount-root []
   (re-frame/clear-subscription-cache!)
-  (reagent/render [views/main-panel]
-                  (.getElementById js/document "app")))
+  (rdom/render [views/main-panel]
+               (.getElementById js/document "app")))
 
 (defn init []
   (routes/app-routes)
