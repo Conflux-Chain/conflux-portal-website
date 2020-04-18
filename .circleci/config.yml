@@ -33,6 +33,7 @@ jobs:
               git config --global user.email $GH_EMAIL
               git config --global user.name $GH_NAME
 
+              cp CNAME resources/public
               cp -r .git resources/public
               cd resources/public
               git add -A
