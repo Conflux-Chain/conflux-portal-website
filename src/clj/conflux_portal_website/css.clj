@@ -1,6 +1,7 @@
 (ns conflux-portal-website.css
   (:require [garden.def :refer [defstyles]]
-            [garden.stylesheet :refer [at-media]]))
+            [garden.core :refer [css]]
+            [garden.stylesheet :refer [at-media at-keyframes]]))
 
 (defstyles screen
 ;;; global
@@ -126,4 +127,14 @@
                    :width "100%"
                    :text-align "center"
                    :font-weight 400
-                   :color "#0C0C0C"}]]])
+                   :color "#6D6D6D"}]]]
+  ;;; components
+  (at-keyframes
+   :dots
+   [:0% :20% {:color "rgba(0,0,0,0)" :text-shadow ".25em 0 0 rgba(0,0,0,0), 5em 0 0 rgba(0,0,0,0)"}]
+   [:40% {:color "white" :text-shadow ".25em 0 0 rgba(0,0,0,0), 5em 0 0 rgba(0,0,0,0)"}]
+   [:60% {:text-shadow ".25em 0 0 white, .5em 0 0 rgba(0,0,0,0)"}]
+   [:80% :100% {:color "white" :text-shadow ".25em 0 0 white, .5em 0 0 white"}])
+  [:.loading-dots:after
+   {:content "\" .\""
+    :animation "dots 1s steps(5,end) infinite"}])

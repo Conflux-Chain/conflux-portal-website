@@ -8,7 +8,7 @@
    [conflux-portal-website.routes :as routes]
    [conflux-portal-website.views :as views]
    [conflux-portal-website.config :as config]
-   ))
+   [conflux-portal-website.components.onboarding :as onboarding]))
 
 
 (defn dev-setup []

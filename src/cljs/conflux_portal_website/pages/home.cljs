@@ -1,8 +1,7 @@
 (ns conflux-portal-website.pages.home
   (:require
    [re-frame.core :as rf]
-   [conflux-portal-website.subs :as subs]
-   [breaking-point.core :as bp]))
+   [conflux-portal-website.components.onboarding :as onboarding]))
 
 ;; ----------------------------------------
 ;; | +-------------+                      |
@@ -52,11 +51,13 @@
   [:section.flex-column.des-container [new-arrival] [portal-title] [portal-des]])
 
 ;; btn
-(defn download-btn []
+(defn download-btn [download-url]
   [:div.download.flex-center
    [:div.wrapper.flex-center
-    [:span.b "Download"]
-    [:img {:src "images/download_icon.svg"}]]])
+    [:span.b
+     {:class (and (not download-url) "loading-dots")
+      :on-click (fn [] (and download-url (js/open download-url)))} "Download"]
+    (and download-url [:img {:src "images/download_icon.svg"}])]])
 
 (defn installation-btn []
   [:div.installation
@@ -65,7 +66,8 @@
    [:div.underline]])
 
 (defn main-btn-container []
-  [:section.btns [download-btn] [installation-btn]])
+  (let [download-url @(rf/subscribe [::onboarding/portal-download-url])]
+    [:section.btns [download-btn download-url] (and (not download-url) [installation-btn])]))
 
 (defn main-left []
   [:section.main-left [main-des-container] [main-btn-container]])
