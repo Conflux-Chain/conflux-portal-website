@@ -1,0 +1,41 @@
+version: 2.1
+
+workflows:
+  build_and_deploy:
+    jobs:
+      - build_and_deploy:
+          filters:
+            branches:
+              only:
+                - master
+
+jobs:
+  build_and_deploy:
+    docker:
+      - image: circleci/clojure:openjdk-11-lein-node
+    environment:
+      - SOURCE_BRANCH: master
+      - TARGET_BRANCH: gh-pages
+    steps:
+      - checkout
+      - run:
+          name: yarn install
+          command: |
+            yarn --frozen-lockfile
+      - run:
+          name: build
+          command: |
+            lein prod
+      - run:
+          name: deploy
+          command: |
+            if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
+              git config --global user.email $GH_EMAIL
+              git config --global user.name $GH_NAME
+
+              cp -r .git resources/public
+              cd resources/public
+              git add -A
+              git commit -m "Automated deployment: ${CIRCLE_SHA1} [ci skip]" --allow-empty
+              git push -v --force-with-lease origin master:$TARGET_BRANCH
+            fi
