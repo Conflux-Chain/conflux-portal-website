@@ -13,8 +13,7 @@
 (defn get-download-url []
   (.then (.getDownloadUrl onboarding) #(rf/dispatch [::portal-download-url %])))
 
-(when-not (portal-installed?)
-  (get-download-url))
+(get-download-url)
 
 (rf/reg-event-db
  ::portal-download-url

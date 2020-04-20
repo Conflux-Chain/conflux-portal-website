@@ -1,5 +1,6 @@
 (ns conflux-portal-website.pages.home
   (:require
+   [clojure.string :as s]
    [re-frame.core :as rf]
    [conflux-portal-website.components.onboarding :as onboarding]))
 
@@ -67,7 +68,7 @@
 
 (defn main-btn-container []
   (let [download-url @(rf/subscribe [::onboarding/portal-download-url])]
-    [:section.btns [download-btn download-url] (and (not download-url) [installation-btn])]))
+    [:section.btns [download-btn download-url] (and download-url (s/ends-with? download-url ".zip") [installation-btn])]))
 
 (defn main-left []
   [:section.main-left [main-des-container] [main-btn-container]])
