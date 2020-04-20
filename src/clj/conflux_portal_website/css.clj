@@ -27,7 +27,7 @@
    [:.header-and-main {:width "100%" :overflow "hidden"}
     ;; header
     [:header
-     {:padding "3.19rem 0"}
+     {:padding "1.19rem 0"}
      [:.portal-logo {:width "26.19rem" :margin-left "6.25rem"}]]
     ;; main
     ;; (at-media
@@ -35,7 +35,7 @@
     ;;   [:.main {:flex-direction "column"}])
     [:.main
      {:display "flex"
-      :padding "1.06rem 11.56rem 6.88rem 11.56rem"
+      :padding "1.06rem 11.56rem 4.88rem 11.56rem"
       :justify-content "center"
       :margin "auto"
       :flex-direction "row"}
@@ -43,7 +43,7 @@
      ;; left
      [:.main-left
       {:padding-right "19.56rem"}
-      [:.des-container {:padding-bottom "10.91rem"}
+      [:.des-container {:padding-bottom "5.91rem"}
        [:.new-arrival {:background "rgba(0,0,0,0.1)"
                        :border-radius "1.22rem"
                        :width "9.5rem"
