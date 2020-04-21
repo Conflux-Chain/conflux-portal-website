@@ -46,6 +46,7 @@ jobs:
               cp CNAME resources/public
               cp -r .git resources/public
               cd resources/public
+              cp -r .circleci resources/public
               git add -A
               git commit -m "Automated deployment: ${CIRCLE_SHA1} [ci skip]" --allow-empty
               git push -v --force-with-lease origin master:$TARGET_BRANCH
