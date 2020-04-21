@@ -15,7 +15,7 @@
   [:.ttu {:text-transform "uppercase"}]
   [:.ttc {:text-transform "capitalize"}]
   [:.ttl {:text-transform "lowercase"}]
-  [:body {:font-family "ProximaNova-Bold,ProximaNova" :width "100%"}]
+  [:body {:font-family "ProximaNova" :width "100%"}]
   [:#app {:width "100%"}]
   ;; home page
   [:.container
@@ -27,8 +27,8 @@
    [:.header-and-main {:width "100%" :overflow "hidden"}
     ;; header
     [:header
-     {:padding "1.19rem 10.36rem" :max-width "95rem" :margin "auto"}
-     [:.portal-logo {:width "21.94rem"}]]
+     {:padding "1.19rem 11.56rem" :max-width "95rem" :margin "auto"}
+     [:.portal-logo {:width "21rem"}]]
     ;; main
     ;; (at-media
     ;;   {:max-width "68rem"}
@@ -36,7 +36,7 @@
     [:.main
      {:display "flex"
       :padding "1.06rem 11.56rem 4.88rem 11.56rem"
-      :justify-content "center"
+      :justify-content "space-between"
       :margin "auto"
       :max-width "95rem"
       :flex-direction "row"}
@@ -56,15 +56,17 @@
                        :text-align "center"}]
        [:.portal-title {:font-size "2.63rem"
                         :color "white"
+                        :font-family "ProximaNova"
                         :line-height "3.54rem"
                         :padding-bottom "1.22rem"}]
-       [:.portal-des-text {:font-weight "400"
-                           :max-width "25rem"
-                           :color "rgba(251,251,255,1)"
+       [:.portal-des-text {:max-width "25rem"
+                           :font-family "ProximaNova"
+                           :color "rgba(251,251,255,0.75)"
                            :line-height "2rem"}]]
       [:.btns
        [:.download
         {:cursor "pointer"
+         :font-family "ProximaNova"
          :margin-bottom "1.5rem"
          :background "linear-gradient(270deg,rgba(126,161,13,1) 0%,rgba(194,195,6,1) 46%,rgba(252,223,0,1) 100%)"
          :box-shadow "0rem 0rem 0.38rem 0rem rgba(151,174,8,1)"
@@ -78,6 +80,7 @@
        [:.installation
         {:cursor "pointer"}
         [:span {:background "linear-gradient(270deg, rgba(143,170,11,1) 0%, rgba(244,219,1,1) 100%)"
+                :font-family "ProximaNova"
                 :line-height "1.53rem"
                 :color "rgba(243,219,1,1)"
                 :-webkit-background-clip "text"
@@ -118,9 +121,11 @@
       [:.mailto {:text-transform "lowercase"}]
       [:span {:color "rgba(1,7,63,1)"
               :line-height "0.88rem"
+              :font-family "ProximaNova"
               :font-size "1.25rem"
               :margin-bottom "2rem"}]
       [:a {:text-transform "capitalize"
+           :font-family "ProximaNova"
            :font-weight "400"
            :color "#6D6D6D"
            :line-height "2.5rem"
