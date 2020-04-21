@@ -1,9 +1,12 @@
 {
+  "scripts": {
+    "compile": "yarn run shadow-cljs compile :app"
+  },
   "devDependencies": {
     "shadow-cljs": "2.8.83"
   },
   "dependencies": {
-    "conflux-portal-onboarding": "^0.0.4",
+    "conflux-portal-onboarding": "^0.0.9",
     "highlight.js": "9.18.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",

@@ -130,10 +130,10 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
-conflux-portal-onboarding@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/conflux-portal-onboarding/-/conflux-portal-onboarding-0.0.4.tgz#1f20eec3615a1c66ec2aadc43f50832bde7d18e0"
-  integrity sha512-PeSPsYBD4SUwnlvd2Fk7s+VGapXZSdSKhf33ximmAeKUwBMZjAbArYSUqPwkZlg8aoAUXB8HuREuv44h99DkNg==
+conflux-portal-onboarding@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/conflux-portal-onboarding/-/conflux-portal-onboarding-0.0.9.tgz#caf10f0abd2cb86dbbf25ef875064250b81d17ad"
+  integrity sha512-rhBwhQPJygPghVt3TN5TZ2QsS6d4t/yXXs9+O9gOSM772oU3lDyS1PTSdA6OR/q7+yAPhTlAgpFXnwMlU/jWHQ==
   dependencies:
     bowser "^2.5.4"
 

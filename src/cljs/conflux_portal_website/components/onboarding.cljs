@@ -4,8 +4,8 @@
    [re-frame.core :as rf]))
 
 ;; debug onboarding package
-;; (set! (.-FAKE_PORTAL_SITE js/window) true)
-(def onboarding (Onboarding. (clj->js {:noinject false})))
+(set! (.-FAKE_PORTAL_SITE js/window) true)
+(def onboarding (Onboarding. (js-obj "cachedPortalVersion" "0.1.4" "ignoreSessionStorage" true)))
 
 (defn portal-installed? []
   (Onboarding/isConfluxPortalInstalled))
