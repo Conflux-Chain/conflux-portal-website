@@ -76,7 +76,6 @@
 
 ;; right
 ;; screenshot
-
 (defn portal-screenshot []
   [:img.portal-screenshot {:src "images/portal-demo.png"}])
 

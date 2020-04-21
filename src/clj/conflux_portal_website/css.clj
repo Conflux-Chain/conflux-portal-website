@@ -27,8 +27,8 @@
    [:.header-and-main {:width "100%" :overflow "hidden"}
     ;; header
     [:header
-     {:padding "1.19rem 0"}
-     [:.portal-logo {:width "26.19rem" :margin-left "6.25rem"}]]
+     {:padding "1.19rem 10.36rem"}
+     [:.portal-logo {:width "21.94rem"}]]
     ;; main
     ;; (at-media
     ;;   {:max-width "68rem"}
@@ -89,7 +89,9 @@
      ;; right
      [:.main-right
       {:display "flex" :justify-content "flex-end" :position "relative"}
-      [:.portal-screenshot {:z-index 2}]
+      [:.portal-screenshot {:z-index 2
+                            :box-shadow "0px 2px 4px 0px rgba(0,0,0,0.5),1px 1px 20px 0px rgba(71,73,81,1)"
+                            :border-radius "12px"}]
       [:.circle-1 {:position "absolute"
                    :margin-left "-10.38rem"
                    :z-index 1
