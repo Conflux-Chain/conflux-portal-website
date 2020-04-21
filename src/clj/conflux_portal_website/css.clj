@@ -27,7 +27,7 @@
    [:.header-and-main {:width "100%" :overflow "hidden"}
     ;; header
     [:header
-     {:padding "1.19rem 10.36rem"}
+     {:padding "1.19rem 10.36rem" :max-width "95rem" :margin "auto"}
      [:.portal-logo {:width "21.94rem"}]]
     ;; main
     ;; (at-media
@@ -38,6 +38,7 @@
       :padding "1.06rem 11.56rem 4.88rem 11.56rem"
       :justify-content "center"
       :margin "auto"
+      :max-width "95rem"
       :flex-direction "row"}
 
      ;; left
