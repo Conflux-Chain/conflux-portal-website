@@ -62,6 +62,7 @@
 
 (defn installation-btn []
   [:div.installation
+   {:on-click #(js/open "https://juejin.im/post/5e9d8133e51d4546b90d2ee9")}
    [:span.b "Installation Guidance"]
    [:img {:src "images/guidance_icon.svg"}]
    [:div.underline]])
