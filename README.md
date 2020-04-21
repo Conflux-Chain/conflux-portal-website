@@ -1,9 +1,14 @@
 # conflux-portal-website
 
-A [re-frame](https://github.com/day8/re-frame) application designed to ... well, that part is up to
-you.
+A [re-frame](https://github.com/day8/re-frame) application designed to help user
+download [ConfluxPortal](https://portal.conflux-chain.org).
 
 ## Getting Started
+
+``` sh
+yarn install # install js dependency
+lein deps # install clojure dependency
+```
 
 ### Project Overview
 
@@ -56,6 +61,8 @@ you.
 * [`src/cljs/conflux_portal_website/`](src/cljs/conflux_portal_website/): SPA source files (ClojureScript,
 [re-frame](https://github.com/Day8/re-frame))
   - [`core.cljs`](src/cljs/conflux_portal_website/core.cljs): contains the SPA entry point, `init`
+  - [`pages`](src/cljs/conflux_portal_website/pages): pages by each route
+  - [`components`](src/cljs/conflux_portal_website/components): components
 
 ### Editor/IDE
 
