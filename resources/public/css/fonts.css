@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'ProximaNova-Bold';
+  src: url('fonts/ProximaNova-Bold.woff') format('woff');
+  src: url('fonts/ProximaNova-Bold.otf') format('opentype');
+  src: url('fonts/ProximaNova-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('fonts/ProximaNova.woff') format('woff');
+  src: url('fonts/ProximaNova.otf') format('opentype');
+  src: url('fonts/ProximaNova.woff2') format('woff2');
+}
