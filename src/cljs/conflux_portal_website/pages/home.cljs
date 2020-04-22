@@ -43,7 +43,7 @@
   [:div.new-arrival.flex-center.b.ttu "new arrival"])
 
 (defn portal-title []
-  [:span.nowrap.portal-title.b.ttc "conflux portal"])
+  [:span.nowrap.portal-title.b "ConfluxPortal"])
 
 (defn portal-des []
   [:p.portal-des-text "ConfluxPortal is an extension for accessing Conflux enabled distributed applications, or \"DApps\" in your normal browser!"])
