@@ -57,7 +57,7 @@
    [:div.wrapper.flex-center
     [:span.b
      {:class (and (not download-url) "loading-dots")
-      :on-click (fn [] (and download-url (js/open download-url)))} "Download"]
+      :on-click (fn [] (and download-url (js/open download-url)))} "Install"]
     (and download-url [:img {:src "images/download_icon.svg"}])]])
 
 (defn installation-btn []
