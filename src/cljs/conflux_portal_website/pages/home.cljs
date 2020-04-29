@@ -54,10 +54,10 @@
 ;; btn
 (defn download-btn [download-url]
   [:div.download.flex-center
+   {:on-click (fn [] (and download-url (js/open download-url)))}
    [:div.wrapper.flex-center
     [:span.b
-     {:class (and (not download-url) "loading-dots")
-      :on-click (fn [] (and download-url (js/open download-url)))} "Install"]
+     {:class (and (not download-url) "loading-dots")} "Install"]
     (and download-url [:img {:src "images/download_icon.svg"}])]])
 
 (defn installation-btn []
