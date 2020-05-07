@@ -10,7 +10,8 @@
                  [secretary "1.2.3"]
                  [garden "1.3.9"]
                  [ns-tracker "0.4.0"]
-                 [breaking-point "0.1.2"]]
+                 [breaking-point "0.1.2"]
+                 [tongue "0.2.9"]]
 
   :plugins [[lein-garden "0.3.0"]
             [lein-shell "0.5.0"]]

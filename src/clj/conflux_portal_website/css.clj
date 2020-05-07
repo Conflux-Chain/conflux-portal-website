@@ -85,7 +85,8 @@
                 :color "rgba(243,219,1,1)"
                 :-webkit-background-clip "text"
                 :-webkit-text-fill-color "transparent"
-                :margin-right "0.5rem"}]
+                :margin-right "0.5rem"
+                :text-transform "capitalize"}]
         [:img {:width "1rem" :height "0.8rem"}]
         [:div.underline {:width "12.31rem"
                          :height "0.13rem"

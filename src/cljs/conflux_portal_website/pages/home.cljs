@@ -2,7 +2,8 @@
   (:require
    [clojure.string :as s]
    [re-frame.core :as rf]
-   [conflux-portal-website.components.onboarding :as onboarding]))
+   [conflux-portal-website.components.onboarding :as onboarding]
+   [conflux-portal-website.i18n :as i18n]))
 
 ;; ----------------------------------------
 ;; | +-------------+                      |
@@ -46,7 +47,7 @@
   [:span.nowrap.portal-title.b "ConfluxPortal"])
 
 (defn portal-des []
-  [:p.portal-des-text "ConfluxPortal is an extension for accessing Conflux enabled distributed applications, or \"DApps\" in your normal browser!"])
+  [:p.portal-des-text [i18n/t :home-page/description]])
 
 (defn main-des-container []
   [:section.flex-column.des-container [new-arrival] [portal-title] [portal-des]])
@@ -57,7 +58,7 @@
    {:on-click (fn [] (and download-url (js/open download-url)))}
    [:div.wrapper.flex-center
     [:span.b
-     {:class (and (not download-url) "loading-dots")} "Install"]
+     {:class (and (not download-url) "loading-dots")} [i18n/t :word/install]]
     (and download-url [:img {:src "images/download_icon.svg"}])]])
 
 (defn installation-btn []
