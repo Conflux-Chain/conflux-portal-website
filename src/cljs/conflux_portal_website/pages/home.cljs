@@ -3,7 +3,8 @@
    [clojure.string :as s]
    [re-frame.core :as rf]
    [conflux-portal-website.components.onboarding :as onboarding]
-   [conflux-portal-website.i18n :as i18n]))
+   [conflux-portal-website.i18n :as i18n]
+   [goog.labs.userAgent.browser]))
 
 ;; ----------------------------------------
 ;; | +-------------+                      |
@@ -63,8 +64,10 @@
 
 (defn installation-btn []
   [:div.installation
-   {:on-click #(js/open "https://juejin.im/post/5e9d8133e51d4546b90d2ee9")}
-   [:span.b "Installation Guidance"]
+   {:on-click #(js/open (if (.isSafari goog.labs.userAgent.browser)
+                          "https://medium.com/@ConfluxNetwork/confluxportal-installation-and-user-manual-9f50de62fee0"
+                          "https://juejin.im/post/5e9d8133e51d4546b90d2ee9"))}
+   [:span.b (str "Installation Guidance ")]
    [:img {:src "images/guidance_icon.svg"}]
    [:div.underline]])
 
