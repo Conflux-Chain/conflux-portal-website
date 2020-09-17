@@ -28,7 +28,7 @@
     ;; header
     [:header
      {:padding "1.19rem 11.56rem" :max-width "95rem" :margin "auto"}
-     [:.portal-logo {:width "21rem"}]]
+     [:.portal-logo {:width "12rem"}]]
     ;; main
     ;; (at-media
     ;;   {:max-width "68rem"}
