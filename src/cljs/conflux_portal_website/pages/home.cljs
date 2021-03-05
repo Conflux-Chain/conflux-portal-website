@@ -114,7 +114,7 @@
      [:a {:href "mailto:portal@conflux-chain.org"} "contact us"]
      [:a {:href "https://github.com/Conflux-Chain/conflux-portal/issues/new/choose"} "support"]
      [:a {:href "https://twitter.com/@Conflux_Network"} "twitter"]]]
-   [:div.copy-right [:span "Copyright©2020 Conflux. All Rights Reserved."]]])
+   [:div.copy-right [:span "©2021 Conflux. All Rights Reserved."]]])
 
 ;;; page
 (defn ui []
