@@ -5,7 +5,7 @@
 
 ;; debug onboarding package
 (set! (.-FAKE_PORTAL_SITE js/window) true)
-(def onboarding (Onboarding. (js-obj "cachedPortalVersion" "0.6.0" "ignoreSessionStorage" true "alioss" true)))
+(def onboarding (Onboarding. (js-obj "cachedPortalVersion" "0.6.1" "ignoreSessionStorage" true "alioss" true)))
 
 (defn portal-installed? []
   (Onboarding/isConfluxPortalInstalled))
