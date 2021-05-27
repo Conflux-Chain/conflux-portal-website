@@ -1,7 +1,7 @@
 # conflux-portal-website
 
 A [re-frame](https://github.com/day8/re-frame) application designed to help user
-download [ConfluxPortal](https://portal.conflux-chain.org).
+download [ConfluxPortal](https://portal.confluxnetwork.org).
 
 ## Getting Started
 

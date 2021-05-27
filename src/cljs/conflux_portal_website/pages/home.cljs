@@ -98,7 +98,7 @@
    [:div.wrapper.flex-row
     [:section.flex-column
      [:span.ttu.b "need help?"]
-     [:a.mailto {:href "mailto:portal@conflux-chain.org"} "portal@conflux-chain.org"]]
+     [:a.mailto {:href "mailto:portal@confluxnetwork.org"} "portal@confluxnetwork.org"]]
     [:section.flex-column
      [:span.ttu.b "learn more"]
      [:a {:href "https://conflux-chain.github.io/conflux-portal-docs/"} "documentation"]
@@ -111,7 +111,7 @@
      [:a {:href "https://github.com/Conflux-Chain/conflux-portal"} "bounty program"]]
     [:section.flex-column
      [:span.ttu.b "connect"]
-     [:a {:href "mailto:portal@conflux-chain.org"} "contact us"]
+     [:a {:href "mailto:portal@confluxnetwork.org"} "contact us"]
      [:a {:href "https://github.com/Conflux-Chain/conflux-portal/issues/new/choose"} "support"]
      [:a {:href "https://twitter.com/@Conflux_Network"} "twitter"]]]
    [:div.copy-right [:span "©2021 Conflux. All Rights Reserved."]]])
