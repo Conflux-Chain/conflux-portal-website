@@ -1,19 +1,21 @@
 (ns conflux-portal-website.components.onboarding
   (:require
-   ["conflux-portal-onboarding/dist/conflux-portal-onboarding.cjs.js" :as Onboarding]
+   [conflux-portal-website.components.get-portal-url :refer [get-download-url]]
+   ;; ["conflux-portal-onboarding/dist/conflux-portal-onboarding.cjs.js" :as Onboarding]
    [re-frame.core :as rf]))
 
 ;; debug onboarding package
-(set! (.-FAKE_PORTAL_SITE js/window) true)
-(def onboarding (Onboarding. (js-obj "cachedPortalVersion" "0.6.8" "ignoreSessionStorage" true "alioss" true)))
+;; (set! (.-FAKE_PORTAL_SITE js/window) true)
+;; (def onboarding (Onboarding. (js-obj "cachedPortalVersion" "0.6.9" "ignoreSessionStorage" true "alioss" true)))
 
-(defn portal-installed? []
-  (Onboarding/isConfluxPortalInstalled))
+;; (defn portal-installed? []
+;;   (Onboarding/isConfluxPortalInstalled))
 
-(defn get-download-url []
-  (.then (.getDownloadUrl onboarding) #(rf/dispatch [::portal-download-url %])))
+(.then (get-download-url) #(rf/dispatch [::portal-download-url %]))
 
-(get-download-url)
+;; (defn get-download-url []
+;;   (.then (.getDownloadUrl onboarding) #(rf/dispatch [::portal-download-url %])))
+;; (get-download-url)
 
 (rf/reg-event-db
  ::portal-download-url

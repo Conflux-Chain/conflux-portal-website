@@ -1,10 +1,11 @@
 (ns conflux-portal-website.pages.home
   (:require
    [clojure.string :as s]
+   [goog.labs.userAgent.browser :refer [isSafari]]
    [re-frame.core :as rf]
+   [conflux-portal-website.components.get-portal-url :as gpu]
    [conflux-portal-website.components.onboarding :as onboarding]
-   [conflux-portal-website.i18n :as i18n]
-   [goog.labs.userAgent.browser]))
+   [conflux-portal-website.i18n :as i18n]))
 
 ;; ----------------------------------------
 ;; | +-------------+                      |
@@ -63,13 +64,14 @@
     (and download-url [:img {:src "images/download_icon.svg"}])]])
 
 (defn installation-btn []
-  [:div.installation
-   {:on-click #(js/open (if (.isSafari goog.labs.userAgent.browser)
-                          "https://medium.com/@ConfluxNetwork/confluxportal-installation-and-user-manual-9f50de62fee0"
-                          "https://juejin.im/post/5e9d8133e51d4546b90d2ee9"))}
-   [:span.b (str "Installation Guidance ")]
-   [:img {:src "images/guidance_icon.svg"}]
-   [:div.underline]])
+  (let [store? @(rf/subscribe [::gpu/store?])]
+    [:div.installation
+     {:on-click #(js/open (if (or store? (isSafari))
+                            "https://medium.com/@ConfluxNetwork/confluxportal-installation-and-user-manual-9f50de62fee0"
+                            "https://juejin.im/post/5e9d8133e51d4546b90d2ee9"))}
+     [:span.b (str "Installation Guidance ")]
+     [:img {:src "images/guidance_icon.svg"}]
+     [:div.underline]]))
 
 (defn main-btn-container []
   (let [download-url @(rf/subscribe [::onboarding/portal-download-url])]
