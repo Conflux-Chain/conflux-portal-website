@@ -19,11 +19,12 @@
   (.then (can-visit-google-webstore?)
          (fn [store?]
            (cond
-             (isMobile)                    "https://github.com/Conflux-Chain/conflux-portal/releases/tag/v0.6.9"
-             (and (not store?) (isChrome)) "https://conflux-soft.oss-cn-beijing.aliyuncs.com/portal/conflux-portal-chrome-0.6.9.zip"
-             (isChrome)                    "https://github.com/Conflux-Chain/conflux-portal/releases/download/v0.6.9/conflux-portal-chrome-0.6.9.zip"
-             (isFirefox)                   "https://addons.mozilla.org/firefox/addon/conflux-portal/"
-             :else                         "https://github.com/Conflux-Chain/conflux-portal/releases/tag/v0.6.9"))))
+             (isMobile)                                                "https://github.com/Conflux-Chain/conflux-portal/releases/tag/v0.6.9"
+             (and (isChrome) (.includes js/navigator.userAgent "Edg")) "https://microsoftedge.microsoft.com/addons/detail/confluxportal/lgegkgjpjkcbhblfidojklhahcbafhno"
+             (and (not store?) (isChrome))                             "https://conflux-soft.oss-cn-beijing.aliyuncs.com/portal/conflux-portal-chrome-0.6.9.zip"
+             (isChrome)                                                "https://github.com/Conflux-Chain/conflux-portal/releases/download/v0.6.9/conflux-portal-chrome-0.6.9.zip"
+             (isFirefox)                                               "https://addons.mozilla.org/firefox/addon/conflux-portal/"
+             :else                                                     "https://github.com/Conflux-Chain/conflux-portal/releases/tag/v0.6.9"))))
 
 (rf/reg-event-db
  ::store?
