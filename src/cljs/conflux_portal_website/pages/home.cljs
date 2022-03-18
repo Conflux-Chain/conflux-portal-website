@@ -52,7 +52,8 @@
   [:p.portal-des-text [i18n/t :home-page/description]])
 
 (defn main-des-container []
-  [:section.flex-column.des-container [new-arrival] [portal-title] [portal-des]])
+  [:section.flex-column.des-container [new-arrival] [portal-title] ;; [portal-des]
+   ])
 
 ;; btn
 (defn download-btn [download-url]
@@ -60,8 +61,8 @@
    {:on-click (fn [] (and download-url (js/open download-url)))}
    [:div.wrapper.flex-center
     [:span.b
-     {:class (and (not download-url) "loading-dots")} [i18n/t :word/install]]
-    (and download-url [:img {:src "images/download_icon.svg"}])]])
+     {:class (and (not download-url) "loading-dots")} [i18n/t :word/learn-more]]
+    (and download-url [:img {:src "images/right_arrow.svg"}])]])
 
 (defn installation-btn []
   (let [store? @(rf/subscribe [::gpu/store?])]
@@ -73,9 +74,18 @@
      [:img {:src "images/guidance_icon.svg"}]
      [:div.underline]]))
 
+(defn warning-container []
+  [:div.warning-container
+   [:img.bg {:src "images/notice-bg.svg"}]
+   [:div.fg
+    [:div.left-panel]
+    [:div.right-panel
+     [:p.warning [i18n/t :home-page/warning]]
+     [download-btn "https://fluentwallet.com"]]]])
+
 (defn main-btn-container []
-  (let [download-url @(rf/subscribe [::onboarding/portal-download-url])]
-    [:section.btns [download-btn download-url] (and download-url (s/ends-with? download-url ".zip") [installation-btn])]))
+  [:section.btns
+   [warning-container]])
 
 (defn main-left []
   [:section.main-left [main-des-container] [main-btn-container]])
